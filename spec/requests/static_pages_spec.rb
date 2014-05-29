@@ -8,9 +8,14 @@ describe "static pages" do
       expect(page).to have_content("Being Mindful")      
     end
 
-    it "should have the title 'Home'" do
+    it "should have the title 'Being Mindful'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Home") 
+      expect(page).to have_title("Being Mindful") 
+    end
+
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title("| Home")  
     end
   end
 
