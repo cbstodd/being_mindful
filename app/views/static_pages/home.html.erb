@@ -1,4 +1,13 @@
-<% provide(:title, "Home") %>
+<% provide(:title) %>
 
-<h1>Being Mindful</h1>
-<p>Welcome to BeingMindful.com</p>
+<div class="splash-container">
+  <div class="splash">
+    <h1 class="splash-head">Being Mindful</h1>
+      <p class="splash-subhead">
+        Welcome to BeingMindful.com
+      </p>
+    </p>
+
+    <p><%= link_to("Sign up!", signup_path, class: "pure-button pure-button-primary") %></p>
+  </div>
+</div>
