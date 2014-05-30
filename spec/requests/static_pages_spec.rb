@@ -28,6 +28,18 @@ describe "static pages" do
     it { should have_title("Contact") }
   end
 
+  it "should have the correct links on the navbar" do
+    visit root_path
+    click_link "Home"
+    expect(page).to have_title("Being Mindful")
+    click_link "About"
+    expect(page).to have_title(full_title("About"))
+    click_link "Contact"
+    expect(page).to have_title(full_title("Contact"))
+    click_link "Help"
+    expect(page).to have_title(full_title("Help"))  
+  end
+
 end
 
 
