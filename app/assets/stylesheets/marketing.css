@@ -12,6 +12,9 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    padding-top: 10px;
+    background-image: url("grey.png");
+
 
 }
 
@@ -21,9 +24,12 @@ body {
 
 
 
+h2 {
+    color: #6FBEF3;
+}
+
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -65,6 +71,8 @@ label {
     margin: 1em 0 0;
     font-weight: bold;
     font-size: 100%;
+    max-width: 35%;
+    margin-left: 32%;
 }
 
 .pure-form input[type] {
@@ -73,6 +81,8 @@ label {
     font-size: 100%;
     width: 100%;
     margin-bottom: 1em;
+    max-width: 35%;
+    margin-left: 32%;
 }
 
 /*
@@ -91,6 +101,13 @@ a.pure-button-primary {
     color: #1f8dd6;
     border-radius: 5px;
     font-size: 120%;
+}
+
+#small_btn {
+    max-width: 435px;
+    max-width: 435px;
+    margin-left: 18.5%;
+
 }
 
 
@@ -288,4 +305,9 @@ a.pure-button-primary {
     .splash-head {
         font-size: 300%;
     }
+}
+
+.alert {
+    color: red;
+    margin-left: 30%;
 }
