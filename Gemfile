@@ -23,6 +23,7 @@ gem 'jbuilder', '1.0.2'
 gem 'pry-rails'
 gem 'pry-theme'
 gem 'purecss-rails'
+gem 'bcrypt'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
