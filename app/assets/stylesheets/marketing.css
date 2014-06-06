@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,14 +14,18 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
-    padding-top: 10px;
+    padding-top: 50px;
     background-image: url("grey.png");
 
 
 }
 
 .white-space {
-    padding: 50px;
+    padding: 30px;
+}
+
+.sign-up {
+    margin-left: 32%;
 }
 
 
@@ -93,7 +99,7 @@ label {
     background-color: #1f8dd6;
     color: white;
     padding: 0.5em 2em;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 a.pure-button-primary {
@@ -103,11 +109,8 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
-#small_btn {
-    max-width: 435px;
-    max-width: 435px;
-    margin-left: 20.5%;
-
+#small-btn {
+    margin-left: 32%;
 }
 
 
@@ -150,6 +153,21 @@ a.pure-button-primary {
     border: none;
     color: #AECFE5;
 }
+
+
+.pure-menu-has-children {
+    background: #2D3E50 !important;
+}
+
+.pure-menu-children {
+    background: #2D3E50 !important;
+}
+
+
+.dropdown .dropdown-toggle a {
+  background-color: #2D3E50 !important;
+}
+
 
 
 /*
@@ -219,7 +237,7 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+    margin: 0.40em 0 1em;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -307,14 +325,18 @@ a.pure-button-primary {
     }
 }
 
-.alert {
-    color: red;
-    margin-left: 30%;
+
+.error_explanation {
+  color: #f00;
+  padding-left: 33%;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
 }
 
-.success {
-    color: #21b50d;
-    font-size: 1.24em;
-    padding-top: 15px;
-    padding-left: 20px;
+/*.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
+*/

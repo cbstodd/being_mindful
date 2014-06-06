@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require purecss
+ *= require purecss-addons
  *= require_tree .
  */
