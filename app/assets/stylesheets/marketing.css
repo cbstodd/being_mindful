@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+/*.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+*/
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -50,6 +56,7 @@ label {
     height: auto;
 }
 
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -88,6 +95,17 @@ label {
     width: 100%;
     margin-bottom: 1em;
     max-width: 35%;
+    margin-left: 32%;
+}
+
+.text_area {
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+    min-width: 35%;
     margin-left: 32%;
 }
 
@@ -335,8 +353,7 @@ a.pure-button-primary {
   }
 }
 
-/*.field_with_errors {
-  @extend .control-group;
-  @extend .error;
+.gravatar-edit {
+    margin-left: 33%;
 }
-*/
+

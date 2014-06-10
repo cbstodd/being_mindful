@@ -12,7 +12,7 @@
         <a href="#" data-toggle="dropdown">Account <span class="pure-custom-caret"></span></a>
       <ul class="pure-menu-children">
         <li><%= link_to("Profile", current_user) %></li>
-        <li><%= link_to("Settings", "#") %></li>
+        <li><%= link_to("Settings", edit_user_path(current_user)) %></li>
         <li class="pure-menu-separator"></li>
         <li><%= link_to("Sign out", signout_path) %></li>
       </ul>
