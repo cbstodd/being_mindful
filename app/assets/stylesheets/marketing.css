@@ -27,7 +27,7 @@ body {
 }
 
 .white-space {
-    padding: 30px;
+    padding: 50px;
 }
 
 .sign-up {
@@ -172,6 +172,9 @@ a.pure-button-primary {
     color: #AECFE5;
 }
 
+.link {
+    color: #2D3E50;
+}
 
 .pure-menu-has-children {
     background: #2D3E50 !important;
@@ -255,17 +258,18 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 0.40em 0 1em;
+    margin: 0em 0em .75em;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbon {
     color: white;
+
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-    color: #1f8dd6;
+    color: #2D3E50;
 }
     .content-subhead i {
         margin-right: 7px;
@@ -273,8 +277,9 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: #1F8DD6;
     color: #aaa;
+
 }
 
 /* This is the class used for the footer */
@@ -357,3 +362,34 @@ a.pure-button-primary {
     margin-left: 33%;
 }
 
+
+/*USERS INDEX*/
+
+.users {
+    list-style: none;
+    margin: 0;
+}
+
+.users li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 3px solid #2D3E50;
+}
+
+.users li:last-child {
+    border-bottom: 3px solid #2D3E50;
+}
+
+.all-users {
+    padding-left: 50px;
+    max-width: 75%;
+}
+
+.head {
+    padding-left: 50px;
+}
+
+.paginate {
+    padding: 10px;
+    margin: 20px;
+}

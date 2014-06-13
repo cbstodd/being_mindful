@@ -27,6 +27,9 @@ gem 'pry-rails'
 gem 'pry-theme'
 gem 'purecss'
 gem 'bcrypt'
+gem 'faker'
+gem 'will_paginate'
+gem 'purecss-will_paginate'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
