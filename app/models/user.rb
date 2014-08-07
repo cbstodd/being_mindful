@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password # Makes sure password is there and valid.
+  has_many :posts, dependent: :destroy
   before_save { email.downcase! }
   before_create :create_remember_token
 

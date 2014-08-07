@@ -1,5 +1,18 @@
 <% provide(:title) %>
 
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+  </div>
+<% end %>
+
 <div class="splash-container">
   <div class="splash">
     <h1 class="splash-head">Being Mindfull</h1>

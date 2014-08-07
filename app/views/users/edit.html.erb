@@ -4,7 +4,7 @@
 <div class="content">
   <h2 class="content-head is-center">Update your profile</h2>
   <div class="splash-subhead">
-      <%= render 'shared/error_messages' %>
+
   </div>
 
   <div class="gravatar-edit">
@@ -15,6 +15,7 @@
   <div class="pure-input-2-3 pure-u-md-2-5">
     <div class="pure-form pure-form-stacked">
         <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
 
           <%= f.label :name %>
           <%= f.text_field :name %>
