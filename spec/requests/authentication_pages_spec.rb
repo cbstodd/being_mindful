@@ -74,7 +74,7 @@ describe "Authentication" do
 
           describe "submitting a DELETE request to the User#destroy action" do
             before { delete user_path(user) }
-            specify { expect(response).to redirect_to(root_url) }
+            specify { expect(response).to redirect_to(root_path) }
           end
         end
       end
@@ -88,7 +88,7 @@ describe "Authentication" do
 
           describe "submitting to the update action" do
             before { patch user_path(user) }
-            specify { expect(response). to redirect_to(signin_path) }
+            specify { expect(response).to redirect_to(signin_path) }
           end
         end
 

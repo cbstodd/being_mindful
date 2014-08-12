@@ -1,7 +1,9 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="feild">
-    <%= f.text_area :content, placeholder: "Compose new post..." %>
+  <div class="row">
+    <div class="large-6 columns">
+     <%= f.text_area :content, placeholder: "Compose new post..." %>
+   </div>
   </div>
-  <%= f.submit "Post", class: "pure-button pure-button-primary" %>
+  <%= f.submit "Post", class: "button" %>
 <% end %>

@@ -1,0 +1,33 @@
+<% provide(:title) %>
+
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+
+    <div class="span8">
+      <h3>POST FEED</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+    <div class="center jumbotron">
+      <%= image_tag("brain_gears_red.png", width: "450px", alt: "Steampunk Brain image") %>
+      <p>Welcome to Being Mindful</p>
+      <p><%= link_to("Sign up now!", signup_path, class: "btn-lg btn-primary") %></p>
+    </div>
+    </div>
+    <div class="center">
+
+      
+  </div>
+</div>
+
+<% end %>

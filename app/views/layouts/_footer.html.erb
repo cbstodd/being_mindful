@@ -1,12 +1,14 @@
-<div class="content-wrapper">
-  <div class="content">
-    <h2 class="content-head is-center">
-      <div class="pure-menu pure-menu-open pure-menu-horizontal">
-        <ul>
-          <li><%= link_to("Contact", contact_path) %></li>
-          <li><%= link_to("About", about_path) %></li>
-        </ul>
-    </div>
-    </h2>
-  </div>
+<div class="container">
+<footer class="footer">
+  <small>
+    Created by: <%= link_to "Colin B. Stodd", "https://github.com/cbstodd", target: "_blank" %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><%= link_to "Help", help_path %></li>
+    </ul>
+  </nav>
+</footer>
 </div>

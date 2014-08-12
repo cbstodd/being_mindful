@@ -47,7 +47,18 @@ class UsersController < ApplicationController
   end
 
 
+
+
   private
+
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+      redirect_to signin_path, notice: "Please sign in."
+      end
+    end
+
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)

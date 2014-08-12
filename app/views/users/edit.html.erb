@@ -1,37 +1,29 @@
 <% provide(:title, "Edit user") %>
 
-
-<div class="content">
-  <h2 class="content-head is-center">Update your profile</h2>
-  <div class="splash-subhead">
-
-  </div>
+<h2>Update your profile</h2>
 
   <div class="gravatar-edit">
     <%= gravatar_for @user %>
     <%= link_to("change", href="http://gravatar.com/emails", target: "_blank") %>
   </div>
 
-  <div class="pure-input-2-3 pure-u-md-2-5">
-    <div class="pure-form pure-form-stacked">
-        <%= form_for(@user) do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
+<div class="well">
+  <%= form_for(@user, html: { class: "form" }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+<br />
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
 
-          <%= f.label :name %>
-          <%= f.text_field :name %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, placeholder: "@"  %><br />
 
-          <%= f.label :email %>
-          <%= f.text_field :email, placeholder: "@"  %>
+    <%= f.label :password %><br />
+    <%= f.password_field :password%><br />
 
-          <%= f.label :password %>
-          <%= f.password_field :password%>
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %><br />
 
-          <%= f.label :password_confirmation, "Confirmation" %>
-          <%= f.password_field :password_confirmation %>
+    <%= f.button "Save changes", class: "btn btn-primary", id: "button" %>
 
-          <%= f.button "Save changes", class: "pure-button", id: "small-btn" %>
-
-        <% end %>
-    </div>
-  </div>
+  <% end %>
 </div>
