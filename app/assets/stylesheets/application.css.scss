@@ -296,7 +296,9 @@ input {
 // }
 
 #button {
-  margin-top: 20px;
+  margin-top: 15px;
+  max-width: 150px;
+  
 }
 
 .btn-lg:hover {
@@ -319,13 +321,18 @@ input {
   list-style: none;
   margin: 0;
   li {
+    background-color: $eggshellGrey;
     overflow: auto;
-    padding: 10px 0px;
-
+    padding: 10px 0;
+    border-top: 1px solid $lightGrey;
     &:last-child {
-
+      border-bottom: 1px solid $lightGrey;
     }
   }
+}
+
+.head {
+  padding-left: 38px;
 }
 
 .sign-up {
@@ -335,22 +342,22 @@ input {
 
 /* microposts */
 
-.microposts {
-
+.posts {
   list-style: none;
   margin: 10px 0 0 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 2px solid $lightGrey;
+
   }
 }
 
 .user {
-  padding-top: 0px;
+
+
 }
 
 .title {
-
   display: block;
   font-weight: bold;
   font-size: 1.24em;
@@ -360,14 +367,14 @@ input {
 .content {
   font-size: 1.14em;
   display: block;
-  // border-top: 2px solid $lightGrey;
+  border-top: 1px solid $lightGrey;
   padding-top: 5px;
   margin-top: 0px;
 }
 
 .timestamp {
   color: $grey;
-  font-size: small;
+  font-size: x-small;
 }
 
 .gravatar {
@@ -397,6 +404,8 @@ input {
 }
 .image {
 }
+
+
 
 
 
