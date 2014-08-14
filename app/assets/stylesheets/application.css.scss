@@ -95,7 +95,8 @@ p {
   line-height: 1.7em;
 }
 
-a {
+a:link {
+
   &:hover {
     text-decoration: none;
   }
@@ -109,7 +110,7 @@ a {
 }
 
 .jumbotron {
-  border: 1px solid #fff;
+  // border: 1px solid #fff;
 
 
 }
@@ -124,18 +125,18 @@ a {
   }
 }
 
-// .navbar {
-//   background-color: $royalBlue;
+.navbar {
+  background-color: $wellGrey;
 //   background-image: url("blue_jean.png");
 //   box-shadow: 0px 0px 3px $darkerGrey;
 //   -moz-box-shadow: 0px 0px 3px $darkerGrey;
 //   -webkit-box-shadow: 0px 0px 3px $darkerGrey;
-// }
+}
 
-// .dropdown .dropdown-toggle {
+.dropdown .dropdown-toggle {
 //   background-image: url("blue_jean.png");
 //   background-color: $royalBlue;
-// }
+}
 
 #logo {
      color: $red;
@@ -340,7 +341,7 @@ input {
   padding-left: 2em;
 }
 
-/* microposts */
+/* posts */
 
 .posts {
   list-style: none;
