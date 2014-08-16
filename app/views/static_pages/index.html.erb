@@ -3,20 +3,24 @@
 <% if signed_in? %>
 
 <div class="row">
-  <aside class="content">
+  <aside class="col-xs-6 col-md-4">
     <section>
       <%= render 'shared/user_info' %>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
     </section>
     <section>
       <%= render 'shared/post_form' %>
     </section>
   </aside>
-  <div class="span8">
-    <h3>Your posts</h3>
+  <div class="col-xs-12 col-md-8">
+    <section class="feed">
+      <h3><%= @user.posts.count %> posts</h3>
       <%= render 'shared/feed' %>
+    </section>
   </div>
 </div>
-
 
 <% else %>
 

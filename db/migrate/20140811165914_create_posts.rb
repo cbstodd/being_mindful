@@ -1,8 +1,8 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.string :content
-      t.integer :user_id
+      t.text     :content, :limit => nil
+      t.integer  :user_id
 
       t.timestamps
     end

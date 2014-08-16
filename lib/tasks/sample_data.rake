@@ -1,25 +1,47 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    User.create!(name: "Colin Stodd",
-                 email: "cbstodd@gmail.com",
-                 password: "Damntone8",
-                 password_confirmation: "Damntone8",
-                 admin: true)    
-    User.create!(name: "Alex Bland",
-                 email: "bland.alexandra@gmail.com",
-                 password: "BeingBland",
-                 password_confirmation: "BeingBland",
-                 admin: true)
-
-    99.times do |n|
-      name  = Faker::Name.name
-      email = "example-#{n+1}@railstutorial.org"
-      password  = "password"
-      User.create!(name: name,
-                   email: email,
-                   password: password,
-                   password_confirmation: password)
-    end
+    make_users
+    # make_posts
+    make_relationships
   end
+end
+
+def make_users
+  admin = User.create!(name:     "Colin Stodd",
+                       email:    "cbstodd@beingmindful.com",
+                       password: "Damntone8",
+                       password_confirmation: "Damntone8",
+                       admin: true)
+  admin = User.create!(name:     "Alex Bland",
+                       email:    "bland@beingmindful.com",
+                       password: "BeingBland",
+                       password_confirmation: "BeingBland",
+                       admin: true)
+  99.times do |n|
+    name  = Faker::Name.name
+    email = "example-#{n+1}@railstutorial.org"
+    password  = "password"
+    User.create!(name:     name,
+                 email:    email,
+                 password: password,
+                 password_confirmation: password)
+  end
+end
+
+# def make_posts
+#   users = User.all(limit: 6)
+#   50.times do
+#     content = Faker::Lorem.paragraph(5)
+#     users.each { |user| user.posts.create!(content: content) }
+#   end
+# end
+
+def make_relationships
+  users = User.all
+  user  = users.first
+  followed_users = users[2..50]
+  followers      = users[3..40]
+  followed_users.each { |followed| user.follow!(followed) }
+  followers.each      { |follower| follower.follow!(user) }
 end

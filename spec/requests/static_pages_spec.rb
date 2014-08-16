@@ -18,11 +18,21 @@ describe "static pages" do
      end
 
      it "should render the user's feed" do
-        user.feed.each do |item|
-          expect(page).to have_selector("li##{item.id}", text: item.content)
-        end
+      expect(page).to have_content("posts")
       end
-    end 
+    end
+
+    describe "follower/following counts" do
+      let(:other_user) { FactoryGirl.create(:user) }
+      before do
+        other_user.follow!(user)
+        visit root_path
+      end
+
+      it { should have_link("0 following", href: following_user_path(user)) }
+      it { should have_link("1 following", href: followers_user_path(user)) }
+    end
+
   end
 
   describe 'Help page' do
@@ -43,7 +53,7 @@ describe "static pages" do
     it { should have_title("Contact") }
   end
 
-  it "should have the correct links on the navbar" do
+  it "should have the correct links on the home page" do
     visit root_path
     click_link "Home"
     expect(page).to have_title("Being Mindful")
@@ -51,8 +61,7 @@ describe "static pages" do
     expect(page).to have_title(full_title("About"))
     click_link "Contact"
     expect(page).to have_title(full_title("Contact"))
-    click_link "Help"
-    expect(page).to have_title(full_title("Help"))  
+ 
   end
 
 end

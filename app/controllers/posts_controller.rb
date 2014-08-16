@@ -9,12 +9,13 @@ class PostsController < ApplicationController
       redirect_to root_path
     else
       @feed_items = []
-      render "static_pages/index"
+      render root_path
     end
   end
 
   def destroy
     @post.destroy
+    flash[:info] = "Post has been deleted"
     redirect_to root_path    
   end
 
