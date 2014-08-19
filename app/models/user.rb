@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password # Makes sure password is there and valid.
   has_many :posts, dependent: :destroy
   has_many :followed_users, through: :relationships, 
-                              source: :followed
+                              source: :followed,
                            source: :follower
   before_save { email.downcase! }
   before_create :create_remember_token

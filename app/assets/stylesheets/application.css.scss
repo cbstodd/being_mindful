@@ -13,12 +13,11 @@
  *= require bootstrap
  */
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* Colors, mixins, etc..*/
 
+/* Colors, mixins, etc..*/
 $blueLight: #2E3455;
 $darkGrey: #333;
 $darkerGrey: #222;
@@ -33,63 +32,58 @@ $salmon: #D9534F;
 $wellGrey: #eee;
 
 @mixin box_sizing {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
 }
 
-
-
 /* universal */
-
 html {
-  overflow-y: scroll;
+overflow-y: scroll;
 }
 
 body {
-  padding-top: 60px;
-  background-color: $eggshellGrey;
+padding-top: 70px;
 
 }
 
 section {
-  overflow: auto;
+overflow: auto;
 }
 
-
 textarea {
-  resize: vertical;
+resize: vertical;
 }
 
 .center {
   text-align: center;
   h1 {
-  margin-bottom: 10px;
+
+    // margin-bottom: 10px;
   }
 }
-/* typography */
 
+/* typography */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  // line-height: 1;
+  color: $darkerGrey;
 }
 
 h1 {
-  font-size: 4em;
-  font-weight: normal;
-  color: $grey;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
+  // font-size: 4em;
+  // letter-spacing: -1px;
+  // margin-bottom: 30px;
+  // text-align: center;
 }
 
+
 h2 {
-  font-size: 1.5em;
-  letter-spacing: 0px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #999;
+  // letter-spacing: 0px;
+  // margin-bottom: 30px;
+  // text-align: center;
+
+
 }
 
 h3 {
@@ -103,54 +97,56 @@ p {
 
 a {
   &:hover {
-    color: $grey;
     text-decoration: none;
   }
 }
 
+#dark-link {
 
-.jumbotron {
-<<<<<<< HEAD
-=======
+  &:hover {
 
-
->>>>>>> following-users
-
+  }
 }
 
 /* header */
 
-.navbar {
-  // background-color: $royalBlue; 
-  // background-image: url("blue_jean.png");
-  box-shadow: 0px 0px 1px $darkerGrey;
-  -moz-box-shadow: 0px 0px 1px $darkerGrey;
-  -webkit-box-shadow: 0px 0px 1px $darkerGrey;
-  border-bottom: 1px solid white;
-
-}
-
-.dropdown .dropdown-toggle {
-  // background-image: url("blue_jean.png");
-  // background-color: $royalBlue;
-}
+#header_links {
 
 
-
-#logo {
-  float: left;
-  font-size: 1.7em;
-  color: $red;
-  // letter-spacing: -1px;
-  padding-top: 13px;
-  font-weight: normal;
-  line-height: 1;
   &:hover {
-  color: $red;
-  text-decoration: none;
+
   }
 }
 
+// .navbar {
+//   background-color: $royalBlue;
+//   background-image: url("blue_jean.png");
+//   box-shadow: 0px 0px 3px $darkerGrey;
+//   -moz-box-shadow: 0px 0px 3px $darkerGrey;
+//   -webkit-box-shadow: 0px 0px 3px $darkerGrey;
+// }
+
+// .dropdown .dropdown-toggle {
+//   background-image: url("blue_jean.png");
+//   background-color: $royalBlue;
+// }
+
+#logo {
+     color: $red;
+//   font-family: Georgia, Serif;
+//   float: left;
+//   margin-right: 10px;
+    font-size: 1.5em;
+
+    // letter-spacing: -1px;
+//   padding-top: 13px;
+//   font-weight: bold;
+//   line-height: 1;
+//   &:hover {
+
+//     text-decoration: none;
+//   }
+}
 
 /* footer */
 
@@ -158,30 +154,28 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: $darkerGrey;
-  a {
-  color: $grey;
-  font-weight: normal;
-    &:hover {
-    text-decoration: none;
 
+  a {
+
+    // font-weight: normal;
+    &:hover {
+      text-decoration: none;
     }
   }
   small {
-  float: left;
-  font-weight: normal;
-  }
-
-  ul {
-  float: right;
-  list-style: none;
-    li {
-  float: left;
-  margin-left: 10px;
+    float: left;
+    font-weight: normal;
     }
-  }
-}
 
+    ul {
+      float: right;
+      list-style: none;
+      li {
+        float: left;
+        margin-left: 10px;
+      }
+    }
+}
 
 /* miscellaneous */
 
@@ -196,41 +190,41 @@ footer {
 /* sidebar */
 
 aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $lightGrey;
-    &:first-child {
-      border: 0;
-      padding-top: 10px;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
+section {
+  padding: 10px 0;
+
+  &:first-child {
+    border: 0;
+    padding-top: 10px;
+  }
+  span {
+  display: block;
+  margin-bottom: 3px;
+  line-height: 1;
+  } 
     h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: 0px;
-      margin-bottom: 3px;
-      margin-top: 0px;
+    font-size: 1.4em;
+    text-align: left;
+    letter-spacing: 0px;
+    margin-bottom: 3px;
+    margin-top: 0px;
     }
   }
 }
+
 
 .gravatar {
   float: left;
   margin-right: 10px;
   font-weight: bold;
   a {
+
     &:hover {
-    color: $grey;
-    text-decoration: none;
+
+      text-decoration: none;
     }
   }
 }
-
-
 
 .stats {
   overflow: auto;
@@ -264,7 +258,7 @@ aside {
 /* forms */
 
 .form {
-  margin-left: 30%;
+  margin-left: 2em;
 }
 
 
@@ -281,26 +275,31 @@ input {
   max-width: 40%;
 }
 
+// .btn-primary {
+//   color: $lightGrey;
+//   border-color: $darkerGrey;
+//   background-color: $royalBlue;
+//   &:hover {
+//     background-color: $blueLight;
+//     color: $lightGrey;
+//   }
+// }
 
-
-.btn-primary {
-  color: $lightGrey; 
-  border-color: $darkerGrey; 
-
-  &:hover {
-    color: $lightGrey;
-
-  }
-
+#button {
+  margin-top: 15px;
+  max-width: 150px;
+  
 }
 
-#button { 
-  max-width: 135px;
+.btn-lg:hover {
+  text-decoration: none;
 }
+
+
 
 #error_explanation {
   color: #f00;
-  ul {
+    ul {
     list-style: none;
     margin: 0 0 18px 0;
   }
@@ -312,8 +311,9 @@ input {
   list-style: none;
   margin: 0;
   li {
+    background-color: $eggshellGrey;
     overflow: auto;
-    padding: 10px 0px;
+    padding: 10px 0;
     border-top: 1px solid $lightGrey;
     &:last-child {
       border-bottom: 1px solid $lightGrey;
@@ -321,35 +321,38 @@ input {
   }
 }
 
+.head {
+  padding-left: 38px;
+}
 
-/* posts */
+.sign-up {
+  padding-top: 10px;
+  padding-left: 2em;
+}
+
+/* microposts */
 
 .posts {
   list-style: none;
   margin: 10px 0 0 0;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> following-users
   li {
     padding: 10px 0;
     border-top: 2px solid $lightGrey;
+
   }
 }
 
 .user {
-  padding-top: 0px;
+
+
 }
 
 .title {
-  color: $lightGrey;
   display: block;
   font-weight: bold;
   font-size: 1.24em;
   padding-bottom: 5px;
-
-
 }
 
 .content {
@@ -358,18 +361,11 @@ input {
   border-top: 1px solid $lightGrey;
   padding-top: 5px;
   margin-top: 0px;
-<<<<<<< HEAD
-
-=======
   overflow: hidden;
->>>>>>> following-users
 }
 
 .timestamp {
   color: $grey;
-<<<<<<< HEAD
-  font-size: small;
-=======
   font-size: x-small;
 
 
@@ -377,34 +373,26 @@ input {
 
 .con-time {
   display: block;
->>>>>>> following-users
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;
-
 }
 
 .gravatar-micro {
-    font-weight: bold;
-    &:hover {
-    color: $grey;
+
+  font-weight: bold;
+  &:hover {
+
     font-weight: bold;
     text-decoration: none;
-
-    }
+  }
 }
 
-.overflow {
-  overflow: hidden;
-}
-
-<<<<<<< HEAD
-=======
 .hidden {
   overflow: hidden;
 }
->>>>>>> following-users
 
 .year {
   text-align: left;
@@ -412,7 +400,15 @@ input {
 
 .feed {
   margin: 10px 0px 10px 0px;
-
 }
+
+.profile-info {
+}
+.image {
+}
+
+
+
+
 
 
