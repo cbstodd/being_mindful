@@ -103,10 +103,8 @@ describe "Authentication" do
         before { patch user_path(wrong_user) }
         # specify { expect(response).to redirect_to(root_url) }
       end
-    end
+    end 
 
- 
-  end
 end
 
 

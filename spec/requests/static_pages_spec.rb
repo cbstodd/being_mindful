@@ -15,12 +15,11 @@ describe "static pages" do
         FactoryGirl.create(:post, user: user, content: "Another post")
         sign_in user 
         visit root_path
-     end
-
-     it "should render the user's feed" do
-      expect(page).to have_content("posts")
       end
-    end
+
+      it "should render the user's feed" do
+        expect(page).to have_content("posts")
+      end
 
     describe "follower/following counts" do
       let(:other_user) { FactoryGirl.create(:user) }
@@ -29,10 +28,10 @@ describe "static pages" do
         visit root_path
       end
 
-      it { should have_link("0 following", href: following_user_path(user)) }
-      it { should have_link("1 following", href: followers_user_path(user)) }
+        it { should have_link("0 following", href: following_user_path(user)) }
+        it { should have_link("1 following", href: followers_user_path(user)) }
+      end
     end
-
   end
 
   describe 'Help page' do
