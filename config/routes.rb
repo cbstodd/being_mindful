@@ -1,20 +1,28 @@
 BeingMindful::Application.routes.draw do
 
-  # POSTS # 
+  root 'static_pages#index'
+
+  resources :sessions, only: [:new, :create, :destroy] 
   resources :posts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   # USERS #
-  resources :users
+  resources :users do 
+    member do 
+      get :following, :followers
+    end
+  end
+
   match '/signup',  to: 'users#new',            via: 'get'
 
   # SESSIONS #
-  resources :sessions, only: [:new, :create, :destroy]
+
   match '/signin',  to: 'sessions#new',     via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
 
   # STATIC PAGES #
-  root 'static_pages#index'
+
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'

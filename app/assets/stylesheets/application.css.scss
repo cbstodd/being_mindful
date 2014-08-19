@@ -237,7 +237,7 @@ section {
   a {
     float: left;
     padding: 0 10px;
-
+    color: $grey;
 
       &:first-child {
         padding-left: 0;
@@ -270,19 +270,18 @@ section {
   margin-left: 2em;
 }
 
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  max-width: 35%;
-  max-width: 35%;
   padding: 10px;
   margin-bottom: 15px;
-
   @include box_sizing;
 }
 
 input {
   height: auto !important;
+  max-width: 40%;
 }
 
 // .btn-primary {
