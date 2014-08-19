@@ -109,7 +109,7 @@ a {
 }
 
 .jumbotron {
-  border: 1px solid #fff;
+
 
 
 }
@@ -237,32 +237,29 @@ section {
   a {
     float: left;
     padding: 0 10px;
+    border-left: 1px solid $lightGrey;
     color: $grey;
-
-      &:first-child {
-        padding-left: 0;
-        border: 0;
-      }
-
-        &:hover {
-          text-decoration: none;
-
-        }
-      }
-      strong {
-        display: block;
-      }
+    &:first-child {
+      padding-left: 0;
+      border: 0;
     }
+    &:hover {
+      text-decoration: none;
 
-    .user_avatars {
-      overflow: auto;
-      margin-top: 10px;
-
-    .gravatar {
-      margin: 1px 1px;
-      }
     }
+  }
+  strong {
+    display: block;
+  }
+}
 
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
 
 /* forms */
 
@@ -344,6 +341,7 @@ input {
 .posts {
   list-style: none;
   margin: 10px 0 0 0;
+
   li {
     padding: 10px 0;
     border-top: 2px solid $lightGrey;
@@ -369,11 +367,18 @@ input {
   border-top: 1px solid $lightGrey;
   padding-top: 5px;
   margin-top: 0px;
+  overflow: hidden;
 }
 
 .timestamp {
   color: $grey;
   font-size: x-small;
+
+
+}
+
+.con-time {
+  display: block;
 }
 
 .gravatar {

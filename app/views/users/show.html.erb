@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="col-md-4">
     <section>
       <h1>
         <%= gravatar_for @user %>
@@ -10,9 +10,12 @@
     <section>
       <%= render 'shared/stats' %>
     </section>
+    <section>
+      <%= render 'follow_form' if signed_in? %>
+    </section>
   </aside>
-  <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
+  <div class="col-md-8">
+    
     <% if @user.posts.any? %>
       <h3>Posts (<%= @user.posts.count %>)</h3>
       <ol class="posts">
