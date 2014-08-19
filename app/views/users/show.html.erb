@@ -1,34 +1,29 @@
 <% provide(:title, @user.name) %>
 
 <div class="row">
-  <div class="form-group">
-    <aside class="col-xs-6 col-md-3">
-      <section>
+  <aside class="col-md-4">
+    <section>
       <h1>
-        <%= gravatar_for @user, "" %>
-        <%= @user.name %><br />
+        <%= gravatar_for @user %>
+        <%= @user.name %>
       </h1>
-        <%= link_to "Edit profile", edit_user_path %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-      <section>
-        <%= render 'follow_form' if signed_in? %>
-      </section>
-    </aside>
-    <div class="overflow">
-      <div class="col-xs-12 col-md-9">        
-        <% if @user.posts.any? %>
-          <h3 class="head"><%= (@user.posts.count) %> posts</h3>
-          <ol class="posts">
-            <%= render @posts %>
-          </ol>
-          <%= will_paginate @posts %>
-        <% end %>
-      </div>
-    </div>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+    <section>
+      <%= render 'follow_form' if signed_in? %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    
+    <% if @user.posts.any? %>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
   </div>
 </div>
-
 

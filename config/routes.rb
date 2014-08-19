@@ -1,8 +1,6 @@
 BeingMindful::Application.routes.draw do
-  root 'static_pages#index'
-
+  
   # USERS #
-  resources :relationships, only: [:create, :destroy]
   resources :users do 
     # member responds to the userid.
     member do 
@@ -10,13 +8,22 @@ BeingMindful::Application.routes.draw do
     end
   end # ie. /users/1/followers(ing)
 
+
+  root 'static_pages#index'
+
+  resources :sessions, only: [:new, :create, :destroy] 
+  resources :posts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
+  # USERS #
+
   match '/signup',  to: 'users#new',            via: 'get'
 
   # POSTS # 
   resources :posts, only: [:create, :destroy]
 
   # SESSIONS #
-  resources :sessions, only: [:new, :create, :destroy]
+
   match '/signin',  to: 'sessions#new',     via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 

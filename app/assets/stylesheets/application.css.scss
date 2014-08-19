@@ -110,6 +110,11 @@ a {
 
 
 .jumbotron {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> following-users
 
 }
 
@@ -262,6 +267,7 @@ aside {
   margin-left: 30%;
 }
 
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -272,6 +278,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+  max-width: 40%;
 }
 
 
@@ -321,7 +328,10 @@ input {
   list-style: none;
   margin: 10px 0 0 0;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> following-users
   li {
     padding: 10px 0;
     border-top: 2px solid $lightGrey;
@@ -348,12 +358,26 @@ input {
   border-top: 1px solid $lightGrey;
   padding-top: 5px;
   margin-top: 0px;
+<<<<<<< HEAD
 
+=======
+  overflow: hidden;
+>>>>>>> following-users
 }
 
 .timestamp {
   color: $grey;
+<<<<<<< HEAD
   font-size: small;
+=======
+  font-size: x-small;
+
+
+}
+
+.con-time {
+  display: block;
+>>>>>>> following-users
 }
 .gravatar {
   float: left;
@@ -375,6 +399,12 @@ input {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.hidden {
+  overflow: hidden;
+}
+>>>>>>> following-users
 
 .year {
   text-align: left;

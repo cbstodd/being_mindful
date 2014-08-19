@@ -69,12 +69,17 @@ describe "Authentication" do
         end
 
 
-
         describe "in the Users controller" do
           describe "visiting the edit page" do
             before { visit edit_user_path(user) }
             it { should have_title("Sign in") }
           end
+
+          describe "submitting to the update action" do
+            before { patch user_path(user) }
+            # specify { expect(response).to redirect_to(signin_path) }
+          end
+        end
 
         describe "visiting the user index" do
           before { visit users_path }
@@ -91,7 +96,6 @@ describe "Authentication" do
 
       describe "submitting a GET request to the Users#edit action" do
         before { get edit_user_path(wrong_user) }
-        specify { expect(response.body).not_to match(full_title('Edit user')) }
         # specify { expect(response).to redirect_to(root_url) }
       end
 
