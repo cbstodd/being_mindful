@@ -8,15 +8,25 @@ end
 
 def make_users
     admin = User.create!(name: "Colin Stodd",
-                 email: "cbstodd@gmail.com",
+                 email: "cbstodd@beingmindful.com",
                  password: "Damntone8",
                  password_confirmation: "Damntone8",
                  admin: true)    
     admin = User.create!(name: "Alex Bland",
-                 email: "bland.alexandra@gmail.com",
+                 email: "bland.alexandra@beingmindful.com",
                  password: "BeingBland",
                  password_confirmation: "BeingBland",
                  admin: true)
+
+  99.times do |n|
+    name  = Faker::Name.name
+    email = "example-#{n+1}@beingmindful.com"
+    password  = "password"
+    User.create!(name:     name,
+                 email:    email,
+                 password: password,
+                 password_confirmation: password)
+  end
 end
 
 
