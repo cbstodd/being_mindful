@@ -12,7 +12,7 @@ def make_users
                  password: "Damntone8",
                  password_confirmation: "Damntone8",
                  admin: true)    
-    admin2 = User.create!(name: "Alex Bland",
+    admin = User.create!(name: "Alex Bland",
                  email: "bland.alexandra@gmail.com",
                  password: "BeingBland",
                  password_confirmation: "BeingBland",

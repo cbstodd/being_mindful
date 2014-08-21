@@ -16,11 +16,10 @@
     </aside>
 
     <div class="col-xs-12 col-md-8">
-      <h3>Your posts</h3>
+      <h3>You have <%= pluralize(current_user.posts.count, "post") %></h3>
       <%= render 'shared/feed' %>
-    </section>
+    </div>
   </div>
-</div>
 
 <% else %>
 

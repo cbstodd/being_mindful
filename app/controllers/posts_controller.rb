@@ -9,7 +9,8 @@ class PostsController < ApplicationController
       redirect_to root_path
     else
       @feed_items = []
-      render root_path
+      flash[:warning] = "Your post is either too long or too short"
+      render 'static_pages/index'
     end
   end
 
