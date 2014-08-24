@@ -16,7 +16,8 @@
     </aside>
 
     <div class="col-xs-12 col-md-8">
-      <h3>You have <%= pluralize(current_user.posts.count, "post") %></h3>
+      <h3>All posts</h3>
+      <p><h5 class="user">You have <%= pluralize(current_user.posts.count, "post") %></h5></p>
       <%= render 'shared/feed' %>
     </div>
   </div>
@@ -24,7 +25,7 @@
 <% else %>
 
   <div class="center jumbotron">
-    <%= image_tag("brain_gears_red.png", width: "450px", alt: "Steampunk Brain image") %>
+    <%= image_tag("brain_gears_red.png", width: "450px", alt: "Image") %>
     <p>Welcome to Being Mindful</p>
     <p><%= link_to("Sign up now!", signup_path, class: "btn-lg btn-primary") %></p>
   </div>

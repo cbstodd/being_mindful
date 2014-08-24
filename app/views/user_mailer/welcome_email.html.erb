@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <h1>Being Mindful</h1>
+  </head>
+  <body>
+    <p>
+    <strong><%= @greeting %> <%= @user.name %>, welcome to beingmindful.com!</strong>
+    </p>
+
+    <p>
+      This email is just a notification email to inform you that you are awesome, and that your account has been successfully created at beingmindful.com.  Please use the link below to log into your account.  And don't forget to SMILE :)  
+    </p>
+
+    <p>
+      <%= link_to "Log In", new_session_url %>
+    </p>
+
+    <p>
+      <small><p>If you believe that this email was sent to you on accident, please use <a href="mailto:cbstodd@gmail.com">this link</a> to let us know.</p>
+
+      <p>Your privacy and trust is of the utmost importance to us. We will never share your email with any person or company. Our information is randomized and encrypted in our database for your protection. Stay mindful!</p></small>
+    </p>
+  </body>
+</html>
