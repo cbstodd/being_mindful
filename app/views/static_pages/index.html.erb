@@ -17,7 +17,6 @@
 
     <div class="col-xs-12 col-md-8">
       <h3>All posts</h3>
-      <p><h5 class="user">You have <%= pluralize(current_user.posts.count, "post") %></h5></p>
       <%= render 'shared/feed' %>
     </div>
   </div>
