@@ -22,6 +22,7 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'sprockets'
+gem 'carrierwave'
 
 
 

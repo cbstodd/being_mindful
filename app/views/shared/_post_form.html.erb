@@ -4,6 +4,9 @@
 
     <%= f.text_area :content, placeholder: "Compose new post...", class: 'form-control', required: true %><br />
 
+    <%= f.label :image, "Upload/Post a file" %>
+    <%= f.file_field :image, class: "btn-sm btn-default" %>
+
     <%= f.submit "Post", class: "btn-sm btn-primary", id: "button" %>
 
 <% end %>
