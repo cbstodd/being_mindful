@@ -3,6 +3,11 @@ class Post < ActiveRecord::Base
   default_scope -> { order('created_at DESC') }
   validates :user_id, presence: true
   validates :content, presence: true, length: { minimum: 2, maximum: 2000 }
+  # validates :image, presence: true
+
+  # CARRIERWAVE #
+  mount_uploader :image, ImageUploader
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)
@@ -11,4 +16,6 @@ class Post < ActiveRecord::Base
     where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
           user_id: user.id)
   end
+
+
 end

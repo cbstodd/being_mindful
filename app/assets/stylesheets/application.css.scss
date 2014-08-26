@@ -235,12 +235,14 @@ section {
   overflow: auto;
   a {
     float: left;
-    padding: 0 10px;
+    padding: 5px 10px;
     border-left: 1px solid $lightGrey;
     color: $grey;
+    border-bottom: 1px solid $lightGrey;
     &:first-child {
       padding-left: 0;
       border: 0;
+      border-bottom: 1px solid $lightGrey;
     }
     &:hover {
       text-decoration: none;
@@ -300,8 +302,6 @@ input {
   text-decoration: none;
 }
 
-
-
 #error_explanation {
   color: #f00;
     ul {
@@ -339,7 +339,7 @@ input {
 
 .posts {
   list-style: none;
-  margin: 10px 0 0 0;
+
 
   li {
     padding: 10px 0;
@@ -349,7 +349,6 @@ input {
 }
 
 .user {
-
 
 }
 
@@ -364,16 +363,26 @@ input {
   font-size: 1.14em;
   display: block;
   border-top: 1px solid $lightGrey;
-  padding-top: 5px;
+  border-bottom: 1px dotted $lightGrey;
+
+  padding: 20px 0px 20px 0px;
   margin-top: 0px;
   overflow: hidden;
+}
+
+.image {
+  padding: 10px;
 }
 
 .timestamp {
   color: $grey;
   font-size: x-small;
+  padding-left: 0px;
 
+}
 
+.delete {
+  padding-left: 0px;
 }
 
 .con-time {
@@ -408,8 +417,6 @@ input {
 }
 
 .profile-info {
-}
-.image {
 }
 
 

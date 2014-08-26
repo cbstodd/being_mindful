@@ -1,8 +1,12 @@
-<%= form_for(@post) do |f| %>
+<%= form_for(@post, html: {:multipart => true}) do |f| %>
 
     <%= render 'shared/error_messages', object: f.object %>
 
     <%= f.text_area :content, placeholder: "Compose new post...", class: 'form-control', required: true %><br />
+  
+    <%= f.label :image, "Upload an image" %>
+    <%= f.file_field :image, class: "btn btn-sm btn-warning" %>
+    <%= f.hidden_field :image_cache %><br />
 
     <%= f.submit "Post", class: "btn-sm btn-primary", id: "button" %>
 

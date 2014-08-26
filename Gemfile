@@ -23,6 +23,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'sprockets'
 gem 'carrierwave'
+gem "mini_magick"
 gem 'newrelic_rpm'
 
 
