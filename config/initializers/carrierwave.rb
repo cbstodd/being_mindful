@@ -1,3 +1,10 @@
+if Rails.env.test? # Store the files locally for test environment
+  CarrierWave.configure do |config|
+    config.storage = :file
+    config.enable_processing = false
+  end
+end
+
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
@@ -10,4 +17,5 @@ CarrierWave.configure do |config|
   config.fog_directory  = 'name_of_directory'                     # required
   config.fog_public     = false                                   # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
+
 end
