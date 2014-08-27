@@ -55,6 +55,10 @@ GEM
     coffee-script-source (1.7.1)
     daemons (1.1.9)
     diff-lcs (1.2.5)
+    dragonfly (1.0.7)
+      addressable (~> 2.3)
+      multi_json (~> 1.0)
+      rack
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.1)
@@ -101,6 +105,8 @@ GEM
     puma (2.9.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.4)
@@ -194,6 +200,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
+  dragonfly
   factory_girl_rails
   faker
   jbuilder (= 1.0.2)
@@ -205,6 +212,7 @@ DEPENDENCIES
   pry-rails
   pry-theme
   puma
+  rack-cache
   rails (= 4.1.4)
   rails_12factor (= 0.0.2)
   rspec-core (= 2.13.1)
