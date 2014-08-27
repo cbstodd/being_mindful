@@ -4,7 +4,7 @@
   </div>
   
   <div class="image">
-    <%= image_tag @post.image %>
+    <%= image_tag post.image_url.to_s %>
   </div>
 
   <div class="timestamp">
@@ -12,11 +12,11 @@
   </div>
 
   <div class="delete">
-    <% if current_user?(post.user) %>
-     <small><%= link_to "delete", post, method: :delete,
-                          data: { confirm: "Are you sure?"},
-                          title: post.content %></small>
-
-    <% end %>
+  <% if current_user?(post.user) %>
+   <small><%= link_to "delete", post, method: :delete,
+                        data: { confirm: "Are you sure?"},
+                        title: post.content %></small>
   </div>
+  <% end %>
+
 </div>

@@ -6,6 +6,8 @@
   
     <%= f.label :image, "Upload an image" %>
     <%= f.file_field :image, class: "btn btn-sm btn-default" %>
+    <%= f.hidden_field :image_cache %>
+
 
     <%= f.submit "Post", class: "btn-sm btn-primary", id: "button" %>
 
