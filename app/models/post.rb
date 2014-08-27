@@ -5,9 +5,9 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: { minimum: 2, maximum: 2000 }
   # validates :image, presence: true
 
-  # # CARRIERWAVE #
-  # mount_uploader :image, ImageUploader
-  # CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
+  # CARRIERWAVE #
+  mount_uploader :image, ImageUploader
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)
