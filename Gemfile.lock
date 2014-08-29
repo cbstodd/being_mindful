@@ -60,10 +60,6 @@ GEM
     coffee-script-source (1.7.1)
     daemons (1.1.9)
     diff-lcs (1.2.5)
-    dragonfly (1.0.7)
-      addressable (~> 2.3)
-      multi_json (~> 1.0)
-      rack
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.39.5)
@@ -239,7 +235,6 @@ DEPENDENCIES
   capybara (= 2.1.0)
   carrierwave
   coffee-rails (= 4.0.1)
-  dragonfly
   factory_girl_rails
   faker
   fog

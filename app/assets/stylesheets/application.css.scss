@@ -18,7 +18,7 @@
 
 
 /* Colors, mixins, etc..*/
-$blueLight: #2E3455;
+$blue: #0878BA;
 $darkGrey: #333;
 $darkerGrey: #222;
 $brightRed: #FF0000;
@@ -30,6 +30,7 @@ $red: #C90E17;
 $royalBlue: #121730;
 $salmon: #D9534F;
 $wellGrey: #eee;
+$white: #fff;
 
 @mixin box_sizing {
 box-sizing: border-box;
@@ -45,7 +46,7 @@ overflow-y: scroll;
 
 body {
 padding-top: 60px;
-background-color: #123434;
+// background-image: url("sos.png");
 
 }
 
@@ -123,18 +124,18 @@ a {
   }
 }
 
-// .navbar {
+.navbar {
 //   background-color: $royalBlue;
-//   background-image: url("blue_jean.png");
+  background-image: url("sos.png");
 //   box-shadow: 0px 0px 3px $darkerGrey;
 //   -moz-box-shadow: 0px 0px 3px $darkerGrey;
 //   -webkit-box-shadow: 0px 0px 3px $darkerGrey;
-// }
+}
 
-// .dropdown .dropdown-toggle {
-//   background-image: url("blue_jean.png");
+.dropdown .dropdown-toggle {
+  // background-image: url("sos.png");
 //   background-color: $royalBlue;
-// }
+}
 
 #logo {
      color: $red;
@@ -316,10 +317,11 @@ input {
   list-style: none;
   margin: 0;
   li {
+    background-image: url("sos.png");
     background-color: $eggshellGrey;
     overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $lightGrey;
+    padding: 10px 20px;
+    border-top: 1px solid $white;
     &:last-child {
       border-bottom: 1px solid $lightGrey;
     }
@@ -359,19 +361,34 @@ input {
   padding-bottom: 5px;
 }
 
+.well {
+  background-image: url("sos.png")
+}
+
+.jumbotron {
+  background-image: url("sos.png");
+}
+
 .content {
   font-size: 1.14em;
   display: block;
-  border-top: 1px solid $lightGrey;
-  border-bottom: 1px dotted $lightGrey;
 
-  padding: 20px 0px 20px 0px;
+  border-top: 2px solid $lightGrey;
+  // border-left: 1px solid $lightGrey;
+  border-bottom: 1px solid $lightGrey;
+
+  padding: 20px 0px 20px 20px;
   margin-top: 0px;
   overflow: hidden;
 }
 
 .image {
-  padding: 10px;
+  padding: 10px 0 10px 0;
+  // border-left: 1px solid $lightGrey;
+}
+
+.photo {
+  border: 2px solid $lightGrey;
 }
 
 .timestamp {
