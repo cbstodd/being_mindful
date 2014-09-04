@@ -4,7 +4,7 @@
   </div>
   
   <div class="image center">
-    <%= image_tag post.image_url.to_s, class: "photo" %>
+    <%= image_tag post.image_url if post.image? %>
   </div>
 
   <div class="timestamp">

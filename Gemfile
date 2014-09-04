@@ -28,6 +28,9 @@ gem "mini_magick"
 gem "fog"
 gem 'newrelic_rpm'
 # gem 'dragonfly'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 
 
 
@@ -53,4 +56,3 @@ group :production do
   gem 'rails_12factor', '0.0.2'
   gem 'rack-cache', :require => 'rack/cache'
 end
-

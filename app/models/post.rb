@@ -17,5 +17,10 @@ class Post < ActiveRecord::Base
           user_id: user.id)
   end
 
+  # Sunpost #
+  searchable do
+    text :user, :content  
+  end
+
 
 end

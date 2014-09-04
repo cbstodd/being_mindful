@@ -12,15 +12,12 @@ BeingMindful::Application.routes.draw do
   root 'static_pages#index'
 
   resources :sessions, only: [:new, :create, :destroy] 
-  resources :posts, only: [:create, :destroy]
+  resources :posts, only: [:create, :destroy, :index, :show]
   resources :relationships, only: [:create, :destroy]
 
   # USERS #
 
   match '/signup',  to: 'users#new',            via: 'get'
-
-  # POSTS # 
-  resources :posts, only: [:create, :destroy]
 
   # SESSIONS #
 

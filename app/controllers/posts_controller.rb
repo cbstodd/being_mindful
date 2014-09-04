@@ -2,6 +2,14 @@ class PostsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
   before_action :correct_user, only: :destroy
 
+  def index
+    @search = Post.search do
+      fulltext params[:search]
+      redirect_to root_path
+    end
+    @post = @search.results
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     if @post.save 
