@@ -26,11 +26,13 @@ gem 'sprockets'
 gem 'carrierwave'
 gem "mini_magick"
 gem "fog"
-gem 'newrelic_rpm'
 # gem 'dragonfly'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
+
+# HEROKU
+gem 'newrelic_rpm' 
 
 
 
