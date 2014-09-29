@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
   before_action :correct_user, only: :destroy
 
+
   def index
     @search = Post.search do
       fulltext params[:search]
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
     private 
 
     def post_params
-      params.require(:post).permit(:content, :image)      
+      params.require(:post).permit(:content, :bootsy_image_gallery_id)      
     end
 
     def correct_user

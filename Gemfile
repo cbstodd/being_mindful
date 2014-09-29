@@ -27,9 +27,10 @@ gem 'carrierwave'
 gem "mini_magick"
 gem "fog"
 # gem 'dragonfly'
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+# gem 'sunspot_rails'
+# gem 'sunspot_solr'
 gem 'progress_bar'
+gem 'bootsy'
 
 # HEROKU
 gem 'newrelic_rpm' 

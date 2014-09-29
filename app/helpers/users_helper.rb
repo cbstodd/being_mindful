@@ -1,4 +1,4 @@
-module UsersHelper
+ module UsersHelper
 
   # Returns the Gravatar (http://gravatar.com/) for given user.
   def gravatar_for(user, options = { size: 60 })

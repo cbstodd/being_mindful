@@ -1,5 +1,6 @@
 BeingMindful::Application.routes.draw do
   
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   # USERS #
   resources :users do 
     # member responds to the userid.

@@ -7,7 +7,7 @@
     </span>
 
     <span class="content well">
-      <%= feed_item.content %><br />
+      <%= feed_item.content.html_safe %><br />
       <div class="image center">
         <%= image_tag feed_item.image %>
       </div>
