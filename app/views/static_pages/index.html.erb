@@ -24,8 +24,15 @@
 
 <% else %>
 
+
   <div class="center jumbotron">
-    <%= image_tag("brain_gears_red.png", width: "450px", alt: "Image") %>
+    <div id="popup">
+      <%= link_to "links.php" do %>
+        <%= image_tag("brain_gears_red.png", width: "450px", alt: "Image") %>
+        <span>This is information about the brain</span>
+      <% end %>
+    </div>
+
     <p>Welcome to Being Mindful</p>
     <p><%= link_to("Sign up now!", signup_path, class: "btn-lg btn-primary") %></p>
   </div>

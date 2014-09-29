@@ -14,6 +14,9 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:username) }
+  it { should respond_to(:summary) }
+  it { should respond_to(:injury_year) }
   it { should respond_to(:remember_token)}
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }

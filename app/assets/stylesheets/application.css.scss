@@ -280,7 +280,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
-  max-width: 40%;
+  // max-width: 40%;
 }
 
 // .btn-primary {
@@ -403,10 +403,6 @@ input {
 
 }
 
-.delete {
-  padding-left: 0px;
-}
-
 .con-time {
   display: block;
 }
@@ -428,6 +424,7 @@ input {
 
 .delete {
   font-size: small;
+  padding-left: 0px;
 }
 
 .year {
@@ -439,7 +436,38 @@ input {
 }
 
 .profile-info {
+
 }
+
+.user-title {
+  font-size: small;
+  padding-top: 5px;
+  color: $red;
+}
+
+.username {
+  font-weight: normal;
+}
+
+.summary {
+  
+}
+
+.summary-label {
+  font-size: 1.5em;
+  color: $red;
+}
+
+.injury {
+
+}
+
+.injury-label {
+  font-size: 1.5em;
+  color: $red;
+}
+
+
 
 
 

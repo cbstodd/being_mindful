@@ -11,12 +11,22 @@ def make_users
                  email: "cbstodd@beingmindful.com",
                  password: "Damntone8",
                  password_confirmation: "Damntone8",
-                 admin: true)    
+                 admin: true,
+                 username: "cbstodd",
+                 summary: "Lorem Ipsum",
+                 injury_year: "2000",
+                 rehab_level: "2",
+                 gender: "True")    
     admin2 = User.create!(name: "Alex Bland",
                  email: "bland.alexandra@beingmindful.com",
                  password: "BeingBland",
                  password_confirmation: "BeingBland",
-                 admin: true)
+                 admin: true,
+                 username: "bland",
+                 summary: "Lorem Ipsum",
+                 injury_year: "1999",
+                 rehab_level: "5",
+                 gender: "False")
 
   99.times do |n|
     name  = Faker::Name.name

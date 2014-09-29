@@ -5,7 +5,13 @@
     <section>
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %><br />
+        <div class="user-title">
+          Username: <br />
+        </div>
+        <div class="username">
+          <%= @user.username %>
+        </div>
       </h1>
     </section>
     <section>
@@ -13,6 +19,26 @@
     </section>
     <section>
       <%= render 'follow_form' if signed_in? %>
+    </section>
+    <section class="well">
+      <div class="summary-label">
+        About: <br>
+      </div>
+      <div class="summary">
+        <%= @user.summary.html_safe %><br>
+      </div>
+      <div class="injury-label">
+        Accident year: <br>
+      </div>
+      <div class="injury">
+        <%= @user.injury_year %>
+      </div>
+      <div class="injury-label">
+        Gender: <br>
+      </div>
+      <div class="gender">
+        <%= @user.gender %>
+      </div>
     </section>
   </aside>
   <div class="col-md-8">    

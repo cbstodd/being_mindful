@@ -34,9 +34,6 @@ gem 'progress_bar'
 # HEROKU
 gem 'newrelic_rpm' 
 
-
-
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-core', '2.13.1'

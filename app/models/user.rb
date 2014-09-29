@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_one :profile
   has_secure_password # Makes sure password is there and valid.
   has_many :posts, dependent: :destroy
   has_many :followed_users, through: :relationships, 
@@ -21,6 +22,12 @@ class User < ActiveRecord::Base
              uniqueness: { case_sensitive: false }
 
   validates :password, length: { minimum: 6 }
+
+  # validates :username, presence: true
+  # validates :summary, presence: true, length: { maximum: 1000 }
+  # validates :injury_year, presence: true
+
+
 
   def feed
     Post.from_users_followed_by(self)
@@ -47,6 +54,7 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+ 
 
 
   private
