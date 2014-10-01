@@ -2,19 +2,19 @@
 Bootsy.setup do |config|
   # Default editor options
   # You can override them locally by passing an editor_options hash to bootsy_area
-  # config.editor_options = {
-  #   font_styles: true,
-  #   emphasis: true,
-  #   lists: true,
-  #   html: false,
-  #   link: true,
-  #   image: true,
-  #   color: true
-  # }
+  config.editor_options = {
+    font_styles: true,
+    emphasis: true,
+    lists: true,
+    html: false,
+    link: true,
+    image: false,
+    color: true
+  }
 
   # Image versions available
   # Possible values: :small, :medium, :large and/or :original
-  config.image_versions_available = [:small, :medium, :large, :original]
+  # config.image_versions_available = [:small, :medium, :large, :original]
 
 
   # SMALL IMAGES
@@ -55,7 +55,7 @@ Bootsy.setup do |config|
   # initializer file, as described in Carrierwave's docs:
   # https://github.com/carrierwaveuploader/carrierwave/blob/master/README.md#using-amazon-s3
   #
-  # config.storage = :file
+  config.storage = :fog
 
 
   # Store directory (inside 'public') for storage = :file

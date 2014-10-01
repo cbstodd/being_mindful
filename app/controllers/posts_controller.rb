@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
+    @post.remove_image!
+    @post.save
     flash[:info] = "Post has been deleted"
     redirect_to root_path    
   end
@@ -34,7 +36,7 @@ class PostsController < ApplicationController
     private 
 
     def post_params
-      params.require(:post).permit(:content, :bootsy_image_gallery_id)      
+      params.require(:post).permit(:content, :image, :bootsy_image_gallery_id)      
     end
 
     def correct_user

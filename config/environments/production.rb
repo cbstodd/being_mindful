@@ -84,7 +84,7 @@ BeingMindful::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = {
-    host: "pacific-journey-3467.herokuapp.com"
+    host: "being-mindful.herokuapp.com"
   }
 
   config.action_mailer.smtp_settings = {
@@ -92,7 +92,7 @@ BeingMindful::Application.configure do
     address:        ENV['MAILGUN_SMTP_SERVER'],
     user_name:      ENV['MAILGUN_SMTP_LOGIN'],
     password:       ENV['MAILGUN_SMTP_PASSWORD'],
-    domain:         'pacific-journey-3467.herokuapp.com',
+    domain:         'being-mindful.herokuapp.com',
     authentication: :plain,
   }
   config.action_mailer.delivery_method = :smtp
