@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  has_one :image
   default_scope -> { order('created_at DESC') }
   validates :user_id, presence: true
   validates :content, presence: true, length: { minimum: 2, maximum: 2000 }
@@ -10,7 +11,7 @@ class Post < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
-  # Returns microposts from the users being followed by the given user.
+  # Returns posts from the users being followed by the given user.
   def self.from_users_followed_by(user)
     followed_user_ids = "SELECT followed_id FROM relationships
                          WHERE follower_id = :user_id"

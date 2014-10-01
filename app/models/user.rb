@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   has_secure_password # Makes sure password is there and valid.
   has_many :posts, dependent: :destroy
   has_many :followed_users, through: :relationships, 
-                              source: :followed,
-                           source: :follower
+                              source: :followed
+
   before_save { email.downcase! }
   before_create :create_remember_token
 
@@ -20,8 +20,6 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
              uniqueness: { case_sensitive: false }
-
-  validates :password, length: { minimum: 6 }
 
   # validates :username, presence: true
   # validates :summary, presence: true, length: { maximum: 1000 }
