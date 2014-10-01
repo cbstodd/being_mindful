@@ -29,7 +29,7 @@ gem "fog"
 # gem 'dragonfly'
 # gem 'sunspot_rails'
 # gem 'sunspot_solr'
-gem 'progress_bar'
+# gem 'progress_bar'
 gem 'bootsy'
 
 # HEROKU
