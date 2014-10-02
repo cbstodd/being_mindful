@@ -10,7 +10,7 @@ CarrierWave.configure do |config|
   }
   config.cache_dir = "#{Rails.root}/tmp/"
   config.fog_directory  = 'beingmindful-posts'                     # required
-  config.fog_public     = false                                   # optional, defaults to true
+  config.fog_public     = true                                   # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
   config.storage = :fog
 end
