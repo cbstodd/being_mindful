@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => 'AWS_SECRET_ACCESS_KEY',
     :region                 => 'us-east-1',
     :host                   => 'being-mindful.herokuapp.com',
-    :endpoint               => 'beingmindful-posts.s3-website-us-east-1.amazonaws.com'
+    # :endpoint               => 'beingmindful-posts.s3-website-us-east-1.amazonaws.com'
 
   }
   config.cache_dir = "#{Rails.root}/tmp/"
