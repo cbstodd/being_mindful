@@ -23,7 +23,7 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'sprockets'
-gem 'carrierwave'
+gem 'carrierwave-aws'
 gem "mini_magick"
 gem "fog"
 # gem 'dragonfly'

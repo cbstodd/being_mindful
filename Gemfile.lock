@@ -31,6 +31,11 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (3.1.0.20140911)
       execjs
+    aws-sdk (1.54.0)
+      aws-sdk-v1 (= 1.54.0)
+    aws-sdk-v1 (1.54.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
@@ -52,6 +57,9 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-aws (0.4.1)
+      aws-sdk (>= 1.29)
+      carrierwave (>= 0.7)
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
@@ -239,7 +247,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   bootsy
   capybara (= 2.1.0)
-  carrierwave
+  carrierwave-aws
   coffee-rails (= 4.0.1)
   factory_girl_rails
   faker
