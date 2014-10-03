@@ -32,6 +32,9 @@ gem "fog"
 # gem 'progress_bar'
 gem 'bootsy'
 
+### S3 ###
+gem 'aws-sdk'
+
 # HEROKU
 gem 'newrelic_rpm' 
 
