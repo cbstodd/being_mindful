@@ -21,10 +21,19 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
              uniqueness: { case_sensitive: false }
 
+  # scope :search, lambda { |query| where(["name LIKE ?", "%#{query}%"]) }
+
+
   # validates :username, presence: true
   # validates :summary, presence: true, length: { maximum: 1000 }
   # validates :injury_year, presence: true
 
+
+  # Search single words and phrases.
+  def self.search(search)
+    require'will_paginate/array'
+    where("name like ?", "%#{search}%")
+  end
 
 
   def feed
@@ -51,8 +60,6 @@ class User < ActiveRecord::Base
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
-
- 
 
 
   private

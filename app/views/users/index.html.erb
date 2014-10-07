@@ -2,7 +2,11 @@
 
 <div class="all-users">
   <div class="pagination">
-    <%= will_paginate %>
+    <%= render partial: 'shared/search' %>
+    <p>
+      <%= link_to "View all users", users_path %>
+    </p>
+
   </div>
   <table>
     <h1 class="head">All users</h1>
@@ -10,8 +14,8 @@
       <%= render @users %>
     </ul>
   </table>
-  <div class="pagination">
-    <%= will_paginate %>
-  </div>
+  <!--<div class="pagination">-->
+
+  <!--</div>-->
 </div>
 

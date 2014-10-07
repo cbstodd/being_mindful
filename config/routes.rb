@@ -18,7 +18,8 @@ BeingMindful::Application.routes.draw do
 
   # USERS #
 
-  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signup',  to: 'users#new',        via: 'get'
+  match '/search',  to: 'users#search',     via: 'get'
 
   # SESSIONS #
 

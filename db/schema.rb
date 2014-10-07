@@ -11,73 +11,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930152507) do
+ActiveRecord::Schema.define(version: 20140929212804) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "bootsy_image_galleries", force: true do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'bootsy_image_galleries', force: true do |t|
+    t.integer  'bootsy_resource_id'
+    t.string   'bootsy_resource_type'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "bootsy_images", force: true do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'bootsy_images', force: true do |t|
+    t.string   'image_file'
+    t.integer  'image_gallery_id'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "posts", force: true do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image"
+  create_table 'posts', force: true do |t|
+    t.text     'content'
+    t.integer  'user_id'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.string   'image'
   end
 
-  create_table "relationships", force: true do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'relationships', force: true do |t|
+    t.integer  'follower_id'
+    t.integer  'followed_id'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
-  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
-  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
+  add_index 'relationships', ['followed_id'], name: 'index_relationships_on_followed_id', using: :btree
+  add_index 'relationships', ['follower_id', 'followed_id'], name: 'index_relationships_on_follower_id_and_followed_id', unique: true, using: :btree
+  add_index 'relationships', ['follower_id'], name: 'index_relationships_on_follower_id', using: :btree
 
-  create_table "rich_rich_files", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "rich_file_file_name"
-    t.string   "rich_file_content_type"
-    t.integer  "rich_file_file_size"
-    t.datetime "rich_file_updated_at"
-    t.string   "owner_type"
-    t.integer  "owner_id"
-    t.text     "uri_cache"
-    t.string   "simplified_type",        default: "file"
+  create_table 'users', force: true do |t|
+    t.string   'name'
+    t.string   'email'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.string   'password_digest'
+    t.string   'remember_token'
+    t.boolean  'admin',           default: false
+    t.text     'summary'
+    t.integer  'injury_year'
+    t.integer  'rehab_level'
+    t.boolean  'gender',          default: true
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "remember_token"
-    t.boolean  "admin",           default: false
-    t.string   "username"
-    t.text     "summary"
-    t.integer  "injury_year"
-    t.integer  "rehab_level"
-    t.boolean  "gender",          default: true
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+  add_index 'users', ['email'], name: 'index_users_on_email', unique: true, using: :btree
+  add_index 'users', ['remember_token'], name: 'index_users_on_remember_token', using: :btree
 
 end

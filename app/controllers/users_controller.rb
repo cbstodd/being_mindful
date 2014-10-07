@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+    @users = User.all.order('created_at DESC')
+    end
+
   end
 
   def show
@@ -62,6 +67,7 @@ class UsersController < ApplicationController
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
+
 
   private
 
