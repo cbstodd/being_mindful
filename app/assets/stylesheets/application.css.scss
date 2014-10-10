@@ -137,6 +137,14 @@ a {
 //   background-color: $royalBlue;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 230px;
+    margin-bottom: 6em;
+
+  }
+}
+
 #logo {
      color: $red;
 //   font-family: Georgia, Serif;
