@@ -2,6 +2,6 @@
 
 A Social Network for people with head traumas.
 
-You can view the test site at: being-mindful.herokuapp.com
+You can view the test site at: beingmindfull.com
 
 Created by: cbstodd
