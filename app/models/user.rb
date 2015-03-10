@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
     where("name like ?", "%#{search}%")
   end
 
-
   def feed
     Post.from_users_followed_by(self)
   end
